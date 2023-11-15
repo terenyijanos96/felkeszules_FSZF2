@@ -22,5 +22,14 @@ ha elsődleges kulcs, akkor a protected primrayKey után lesz
 10. php artisan migrate (eslő alkalommal csak migrate, később migrate:fresh)
 11. factories -> returnbe megadni a fake adatokat $ertek => fake()->name()
 12 seeders kikommentelni az App\MOdel.... és átírni az aktuálius modelre
-13. 
+13. php artisan db:seed
+
+14 manuális adatok feltöltése:
+	migrációs fájlban az up metóduson belül...:
+
+	Modelnév::create(['oszlopnév' => 'érték']) 
+
+pl.: Airline::create(['name' => 'Gizi', 'country' => 'Dánia']);
+
+15. php artisan migrate:fresh --seed
 
