@@ -1,0 +1,21 @@
+0. adatbázis létrehozása php my adminban
+1. composer create-project laravel/laravel project_neve
+2. .env fájl átírása -> DB_DATABASE = adatbazis_neve
+3 belemenni a project mappába (cd projektmappa)
+4. szerver elindítása: php artisan serve
+
+5 új terminál nyitása, és cd projectmappa....
+6 php artisan make:model Modelnév-mf (Nagy Kezdő Betűvel és egyesszám!! pl.: users helyett User) 
+7 a migrációs fájlokban aátírni a dolgokat
+8 a modelben beírni az átírt id-t (átírni az elsődleges kulcs nevét)
+	protected primaryKey = 'id'
+
+9 kitöltendők megadása szintén a modelben.... jóformán u.a. mint a not null sql-ben
+	protected $fillable = [
+ 	       'name',
+  	      'country'
+	]
+
+a tábla mezője két helyen fog szerepelni... a migrációs fájlban és a modelben ha leíró akkor a fillable-ben lesz, 
+ha elsődleges kulcs, akkor a protected primrayKey után lesz
+
