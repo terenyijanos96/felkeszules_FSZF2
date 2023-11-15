@@ -33,3 +33,17 @@ pl.: Airline::create(['name' => 'Gizi', 'country' => 'Dánia']);
 
 15. php artisan migrate:fresh --seed
 
+16 Controller létrehozása
+	php artisan make:Controller ControllerNeve-m
+
+pl.: php artisan make:Controller AirlineController -m (MOdelnévCOntroller)
+
+17. routes hozzáadása (fájl legaljára) routes/api.php
+Route::get('airlines', [AirlineController::class , 'index']);
+
+18 
+böngészőben (localhost:8000) + api/airlines
+localhost:8000/api/airlines
+
+19 thunder client -> new collection -> new request 
+get, get id-val, post, put id-val, delete id-val
